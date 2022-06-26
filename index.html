@@ -118,6 +118,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     display: none;
   }
 </style>
+<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 
@@ -262,10 +263,159 @@ document.addEventListener('DOMContentLoaded', function(event) {
           </label>
 
           <div class="trigger">
+<a class="page-link" href="/A/about.html">ABOUT</a><a class="page-link" href="/A/archives.html">ARCHIVES</a><a class="page-link" href="/A/categories.html">CATEGORIES</a><a class="page-link" href="/A/">HOME</a><a class="page-link" href="/A/tags.html">TAGS</a>
 
 
 
 
+
+
+
+
+
+<span class="page-link">
+
+
+
+<div id="google_translate_element" style="display: none;">
+</div>
+
+<span class="ct-language">
+  <ul class="list-unstyled ct-language-dropdown">
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="en">
+          
+          <img src="https://cdn.countryflags.com/thumbs/united-states-of-america/flag-400.png" title="English">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="fr">
+          
+          <img src="https://cdn.countryflags.com/thumbs/france/flag-400.png" title="French">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="zh-CN">
+          
+          <img src="https://cdn.countryflags.com/thumbs/china/flag-400.png" title="Chinese(Simple)">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ja">
+          
+          <img src="https://cdn.countryflags.com/thumbs/japan/flag-400.png" title="Japanese">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ko">
+          
+          <img src="https://cdn.countryflags.com/thumbs/south-korea/flag-400.png" title="Korean">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ru">
+          
+          <img src="https://cdn.countryflags.com/thumbs/russia/flag-400.png" title="Russian">
+          
+        </a>
+      </li>
+    
+  </ul>
+</span>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,
+    layout: google.translate.TranslateElement.InlineLayout.VERTICAL
+  }, 'google_translate_element');
+
+  // Links to cross-origin destinations are unsafe
+  var gll = document.getElementsByClassName('goog-logo-link')[0];
+  if (gll) {
+    gll.setAttribute('rel', 'noopener');
+  }
+
+  function restoreLang() {
+    var iframe = document.getElementsByClassName('goog-te-banner-frame')[0];
+    if (!iframe) return;
+
+    var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+    var restore_el = innerDoc.getElementsByTagName("button");
+
+    for (var i = 0; i < restore_el.length; i++) {
+      if (restore_el[i].id.indexOf("restore") >= 0) {
+        restore_el[i].click();
+        var close_el = innerDoc.getElementsByClassName("goog-close-link");
+        close_el[0].click();
+        return;
+      }
+    }
+  }
+
+  function triggerHtmlEvent(element, eventName) {
+    var event;
+    if (document.createEvent) {
+      event = document.createEvent('HTMLEvents');
+      event.initEvent(eventName, true, true);
+      element.dispatchEvent(event);
+    } else {
+      event = document.createEventObject();
+      event.eventType = eventName;
+      element.fireEvent('on' + event.eventType, event);
+    }
+  }
+
+  var googleCombo = document.querySelector("select.goog-te-combo");
+  var langSelect = document.querySelector('.ct-language');
+  langSelect.addEventListener('click', function(event) {
+    if (!event.target) {
+      return;
+    }
+
+    var selected = document.querySelector('.ct-language .ct-language-selected');
+    if (selected) {
+      selected.classList.remove('ct-language-selected');
+    }
+
+    var target = event.target;
+    while (target && target !== langSelect ) {
+      if (target.matches('.lang-select')) {
+        break;
+      }
+      target = target.parentElement;
+    }
+
+    if (target && target.matches('.lang-select')) {
+      var lang = target.getAttribute('data-lang');
+      if (googleCombo.value == lang) {
+        restoreLang();
+      } else {
+        target.parentElement.classList.add('ct-language-selected');
+        googleCombo.value = lang;
+        triggerHtmlEvent(googleCombo, 'change');
+      }
+    }
+
+    event.preventDefault();
+  });
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</span>
 </div>
         </nav>
 </div>
@@ -273,7 +423,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 </header>
 
 <script>
-  (function() {
+  function initHeader() {
     var lastScrollY = getScrollPos().y;
     var documentElement = document.documentElement;
 
@@ -298,7 +448,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
     });
 
     storeScrollData();
-  })();
+  }
+  document.addEventListener('DOMContentLoaded', initHeader);
 </script>
 
 
@@ -446,8 +597,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 <section class="page-banner">
     <div class="page-banner-img">
-<div style="background-image: url(/A/default)"></div>
-        <img class="img-placeholder" src="/A/default">
+<div style="background-image: url(/A/Your%20image%20url)"></div>
+        <img class="img-placeholder" src="/A/Your%20image%20url">
 </div>
     <div class="wrapper">
       <div class="page-banner-inner"><div class="page-banner-default">
@@ -610,6 +761,24 @@ document.addEventListener('DOMContentLoaded', function(event) {
     }
   })();
 </script>
+<div id="click-to-top" class="click-to-top">
+  <i class="fa fa-arrow-up"></i>
+</div>
+<script>
+  (function () {
+    const clickToTop = document.getElementById('click-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        clickToTop.classList.add('show')
+      }else {
+        clickToTop.classList.remove('show')
+      }
+    });
+    clickToTop.addEventListener('click', () => {
+      window.smoothScrollTo(0);
+    });
+  })();
+</script>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
         <div class="framework">
@@ -629,7 +798,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
   <div class="pagination">
   <!-- Post list links -->
-  <ul class="post-list"><li>
+  <ul class="post-list">
+<li>
       
 
 
@@ -709,7 +879,1246 @@ Jekyll requires blog post files to be named according ... <span class="read_more
         </p>
       </a>
       <div class="post-tags"></div>
-    </li></ul>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/A/jekyll/2018/12/07/welcome-to-jekyll.html">
+          Welcome to Jekyll!
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Dec 7, 2018</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/A/jekyll/2018/12/07/welcome-to-jekyll.html">
+        <p>
+        You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.
+
+To add new posts, simply add a file in the _posts dire... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/A/tags.html#jekyll">#jekyll</a><a class="post-tag" href="/A/tags.html#theme">#theme</a><a class="post-tag" href="/A/tags.html#yat">#yat</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/A/markdown/2018/12/05/an-exhibit-of-markdown.html">
+          An exhibit of Markdown
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Dec 5, 2018</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 2 mins</span>
+      </div>
+      <a class="post-excerpt" href="/A/markdown/2018/12/05/an-exhibit-of-markdown.html">
+        <p>
+        This note demonstrates some of what Markdown is capable of doing.
+
+An exhibit of Markdown
+
+Note: Feel free to play with this page. Unlike regular notes, this doesn’t automatically save itself.
+
+Basic formatting
+
+Paragraphs can be written like so. A paragraph is the basic block of Markdown. A paragraph is what text will turn into when there is no... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/A/tags.html#example">#example</a><a class="post-tag" href="/A/tags.html#markdown">#markdown</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/A/markdown/2018/05/26/mathjax-test.html">
+          Mathjax Test
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> May 26, 2018</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/A/markdown/2018/05/26/mathjax-test.html">
+        <p>
+        
+  A safe integer is an integer that
+    
+      can be exactly represented as an IEEE-754 double precision number, and
+      whose IEEE-75 representation cannot be the result of rounding any other integer to fit the IEEE-754 representation
+    
+  
+  For example, $ 2 ^ {53} - 1 $ is a safe integer,
+    
+      it can be exactly represented
+    
+  
+
+ <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/A/tags.html#test">#test</a></div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/A/example/2017/12/18/video-example.html">
+          Video example
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Dec 18, 2017</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 3 mins</span>
+      </div>
+      <a class="post-excerpt" href="/A/example/2017/12/18/video-example.html">
+        <p>
+        Canon in D (Pachelbel’s Canon) - Cello &amp; Piano [BEST WEDDING VERSION]
+Some of you know that we occasionally play for weddings. As you can imagine, we get a LOT of requests for Canon in D, and we discovered that there were no good arrangements available anywhere for piano and cello! Hard to believe given its popularity. So we decided to make ... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/A/tags.html#video">#video</a></div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/A/example/2017/12/15/table-example.html">
+          Table example
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Dec 15, 2017</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 4 mins</span>
+      </div>
+      <a class="post-excerpt" href="/A/example/2017/12/15/table-example.html">
+        <p>
+        Table example as below
+
+For now, these extended features are provided:
+
+
+  Cells spanning multiple columns
+  Cells spanning multiple rows
+  Cells text align separately
+  Table header not required
+  Grouped table header rows or data rows
+
+
+Rowspan and Colspan
+^^ in a cell indicates it should be merged with the cell above.
+This feature is contribu... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/A/tags.html#table">#table</a></div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/A/example/2017/12/08/mermaid-example.html">
+          Mermaid example
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Dec 8, 2017</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/A/example/2017/12/08/mermaid-example.html">
+        <p>
+        1. Pie chart
+
+
+
+2. sequence diagram
+
+
+
+
+
+3. Class diagram
+
+
+4. State diagram
+
+ <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/A/tags.html#mermaid">#mermaid</a></div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/A/example/2017/12/04/plantuml-example.html">
+          Plantuml example
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Dec 4, 2017</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/A/example/2017/12/04/plantuml-example.html">
+        <p>
+        My First PlantUML
+
+PlantUML Block-1
+
+
+PlantUML Block-2
+
+
+PlantUML Block-3
+
+
+PlantUML Block-4
+
+
+ <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/A/tags.html#plantuml">#plantuml</a></div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/A/markdown/2017/06/10/quick-mardown-example.html">
+          Quick markdown example
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Jun 10, 2017</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 3 mins</span>
+      </div>
+      <a class="post-excerpt" href="/A/markdown/2017/06/10/quick-mardown-example.html">
+        <p>
+        Paragraphs are separated by a blank line.
+
+2nd paragraph. Italic, bold, and monospace. Itemized lists
+look like:
+
+
+  this one
+  that one
+  the other one
+
+
+Note that — not considering the asterisk — the actual text
+content starts at 4-columns in.
+
+
+  Block quotes are
+written like so.
+
+  They can span multiple paragraphs,
+if you like.
+
+
+Use 3 dash... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/A/tags.html#example">#example</a></div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/A/junk/2017/05/20/this-post-demonstrates-post-content-styles.html">
+          This post demonstrates post content styles
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> May 20, 2017</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 4 mins</span>
+      </div>
+      <a class="post-excerpt" href="/A/junk/2017/05/20/this-post-demonstrates-post-content-styles.html">
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.
+
+Some great heading (h2)
+
+Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, m... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"></div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/A/junk/2016/08/12/my-example-post.html">
+          My Example Post
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Aug 12, 2016</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/A/junk/2016/08/12/my-example-post.html">
+        <p>
+        Eos eu docendi tractatos sapientem, brute option menandri in vix, quando vivendo accommodare te ius. Nec melius fastidii constituam id, viderer theophrastus ad sit, hinc semper periculis cum id. Noluisse postulant assentior est in, no choro sadipscing repudiandae vix. Vis in euismod delenit dignissim. Ex quod nostrum sit, suas decore animal id i... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"></div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/A/misc/2016/05/20/super-long-article.html">
+          Some articles are just so long they deserve a really long title to see if things will break well
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> May 20, 2016</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/A/misc/2016/05/20/super-long-article.html">
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lo... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"></div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/A/misc/2016/05/19/super-short-article.html">
+          Some articles are just so short that we have to make the footer stick
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> May 19, 2016</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/A/misc/2016/05/19/super-short-article.html">
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur s... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"></div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/A/markdown/2016/01/01/another-test-markdown.html">
+          Another test markdown
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Jan 1, 2016</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 9 mins</span>
+      </div>
+      <a class="post-excerpt" href="/A/markdown/2016/01/01/another-test-markdown.html">
+        <p>
+        Put the math expression within $…$:
+
+\(\LaTeX{}\)
+
+$\Pi$
+
+$ a * b = c ^ b $
+
+$ 2^{\frac{n-1}{3}} $
+
+$ \int_a^b f(x)\,dx. $
+
+\( \int_a^b f(x)\,dx. \)
+
+$$
+\begin{cases}
+\text{if true}\ foo 
+\text{if false}\ bar
+\end{cases}
+$$
+
+
+  
+    
+      $ \rho {\rm{FOD}} = \sum\limits{\sigma ,i} {(\delta _1 - \delta _2 n_i^\sigma )
+      \phi _i^\sigma ({\bf{... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/A/tags.html#test">#test</a></div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/A/markdown/2015/02/28/test-markdown.html">
+          Test markdown
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Feb 28, 2015</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/A/markdown/2015/02/28/test-markdown.html">
+        <p>
+        You can write regular markdown here and Jekyll will automatically convert it to a nice webpage.  I strongly encourage you to take 5 minutes to learn how to write in markdown - it’ll teach you how to transform regular text into bold/italics/headings/tables/etc.
+
+Here is some bold text
+
+Here is a secondary heading
+
+Here’s a useless table:
+
+
+  
+   ... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/A/tags.html#test">#test</a></div>
+    </li>
+</ul>
 
   <!-- Pagination links -->
 </div>
@@ -743,14 +2152,38 @@ Jekyll requires blog post files to be named according ... <span class="read_more
   <ul>
     <li>
       <a href="/A/index.html">
-        All<span>1</span>
+        All<span>15</span>
       </a>
     </li>
 
     
       <li>
+        <a href="/A/categories.html#h-example">
+          example <span>4</span>
+        </a>
+      </li>
+    
+      <li>
         <a href="/A/categories.html#h-jekyll">
-          jekyll <span>1</span>
+          jekyll <span>2</span>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/A/categories.html#h-junk">
+          junk <span>2</span>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/A/categories.html#h-markdown">
+          markdown <span>5</span>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/A/categories.html#h-misc">
+          misc <span>2</span>
         </a>
       </li>
     
@@ -772,9 +2205,9 @@ Jekyll requires blog post files to be named according ... <span class="read_more
 
   <div class="wrapper">
     <div class="site-footer-inner">
-      <div> </div>
+<div></div>
       <div>Powered by <a title="Jekyll is a simple, blog-aware, static site
-      generator." href="http://jekyllrb.com/">Jekyll</a> &amp; <a title="Yat, yet
+      generator." href="https://jekyllrb.com/">Jekyll</a> &amp; <a title="Yat, yet
       another theme." href="https://github.com/jeffreytse/jekyll-theme-yat">Yat Theme</a>.</div>
       <div class="footer-col rss-subscribe">Subscribe <a href="/A/feed.xml">via RSS</a>
 </div>
