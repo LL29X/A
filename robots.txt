@@ -1,1 +1,1 @@
-Sitemap: /jekyll-github-actions/sitemap.xml
+Sitemap: /A/sitemap.xml
