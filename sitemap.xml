@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>/A/misc/2022/06/26/hello-world.html</loc>
+<loc>/misc/2022/06/26/hello-world.html</loc>
 <lastmod>2022-06-26T00:00:00+00:00</lastmod>
 </url>
 <url>
-<loc>/A/about.html</loc>
+<loc>/about.html</loc>
 </url>
 <url>
-<loc>/A/archives.html</loc>
+<loc>/archives.html</loc>
 </url>
 <url>
-<loc>/A/categories.html</loc>
+<loc>/categories.html</loc>
 </url>
 <url>
-<loc>/A/</loc>
+<loc>/</loc>
 </url>
 <url>
-<loc>/A/tags.html</loc>
+<loc>/tags.html</loc>
 </url>
 </urlset>
